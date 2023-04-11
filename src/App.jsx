@@ -1,6 +1,12 @@
 import { useState, useEffect } from 'react';
 import { Button, Typography, AppBar, Toolbar, Tabs, Tab } from '@mui/material';
 import Form from './components/Form';
+import Cards from './components/Cards';
+import Modals from './components/Modals';
+import Containers from './components/Containers';
+import ListsComponent from './components/ListsComponent';
+import Accord from './components/Accord';
+import DrawerMenu from './components/DrawerMenu';
 
 function App() {
     const [value, setValue] = useState(0);
@@ -23,10 +29,16 @@ function App() {
             <br />
             <Form /> */}
 
-            <AppBar position="static">
+            <AppBar position="static" sx={{background: '#001E3C'}}>
                 <Toolbar>
-                    <img src="https://creazilla-store.fra1.digitaloceanspaces.com/icons/3209893/material-ui-icon-md.png" alt="logo" height="50px" />
-                    <Typography variant="h5" sx={{marginLeft: '15px'}}>MUI</Typography>
+                    <img
+                        src="https://v4.mui.com/static/logo.png"
+                        alt="logo"
+                        height="50px"
+                    />
+                    <Typography variant="h5" sx={{ marginLeft: '15px' }}>
+                        MUI
+                    </Typography>
                     <Tabs
                         sx={{ marginLeft: 'auto' }}
                         value={value}
@@ -39,10 +51,18 @@ function App() {
                         <Tab label="Contact" />
                     </Tabs>
                     <Button variant="contained" color="success" sx={{ marginLeft: 'auto' }}>
-                        Signin
+                        Sign in
                     </Button>
                 </Toolbar>
             </AppBar>
+            <div style={{ marginTop: 70 }}>
+                <Cards />
+                <Modals />
+                <Containers />
+                <ListsComponent />
+                <Accord />
+                <DrawerMenu />
+            </div>
         </div>
     );
 }
