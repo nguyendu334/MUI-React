@@ -7,6 +7,7 @@ import Containers from './components/Containers';
 import ListsComponent from './components/ListsComponent';
 import Accord from './components/Accord';
 import DrawerMenu from './components/DrawerMenu';
+import ResponsiveGrid from './components/ResponsiveGrid';
 
 function App() {
     const [value, setValue] = useState(0);
@@ -62,6 +63,7 @@ function App() {
                 <ListsComponent />
                 <Accord />
                 <DrawerMenu />
+                <ResponsiveGrid />
             </div>
         </div>
     );
