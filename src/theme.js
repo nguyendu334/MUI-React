@@ -5,11 +5,6 @@ export const theme = createTheme({
         primary: {
             main: '#ff5733',
         }
-    },
-    typography: {
-        button: {
-            width: '300px'
-        }
     }
 
 })

@@ -1,13 +1,19 @@
 import { useState, useEffect } from 'react';
-import { Button, Typography, AppBar, Toolbar, Tabs, Tab } from '@mui/material';
-import Form from './components/Form';
-import Cards from './components/Cards';
-import Modals from './components/Modals';
-import Containers from './components/Containers';
-import ListsComponent from './components/ListsComponent';
-import Accord from './components/Accord';
-import DrawerMenu from './components/DrawerMenu';
-import ResponsiveGrid from './components/ResponsiveGrid';
+// import { Button, Typography, AppBar, Toolbar, Tabs, Tab } from '@mui/material';
+// import Form from './components/Form';
+// import Cards from './components/Cards';
+// import Modals from './components/Modals';
+// import Containers from './components/Containers';
+// import ListsComponent from './components/ListsComponent';
+// import Accord from './components/Accord';
+// import DrawerMenu from './components/DrawerMenu';
+// import ResponsiveGrid from './components/ResponsiveGrid';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import About from './pages/About';
+import Contact from './pages/Contact';
+import Menu from './pages/Menu';
+import Pagenotfound from './pages/Pagenotfound';
 
 function App() {
     const [value, setValue] = useState(0);
@@ -30,7 +36,7 @@ function App() {
             <br />
             <Form /> */}
 
-            <AppBar position="static" sx={{background: '#001E3C'}}>
+            {/* <AppBar position="static" sx={{background: '#001E3C'}}>
                 <Toolbar>
                     <img
                         src="https://v4.mui.com/static/logo.png"
@@ -64,7 +70,16 @@ function App() {
                 <Accord />
                 <DrawerMenu />
                 <ResponsiveGrid />
-            </div>
+            </div> */}
+            <Router>
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/about" element={<About />} />
+                    <Route path="/contact" element={<Contact />} />
+                    <Route path="/menu" element={<Menu />} />
+                    <Route path="*" element={<Pagenotfound />} />
+                </Routes>
+            </Router>
         </div>
     );
 }
